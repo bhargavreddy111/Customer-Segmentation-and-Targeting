@@ -1,6 +1,3 @@
-getwd()
-setwd("D:/MSBA/2nd Semester/Marketing/Project/personal-loan-modeling")
-getwd()
 df=read.csv("Bank_Personal_Loan_Modelling.csv", header=TRUE)
 dim(df)
 head(df)
@@ -156,5 +153,3 @@ pred.valid=predict(fit.logit, df_test[,-8],type="response" )
 pred.valid <- ifelse(pred.valid> 0.5,1,0)
 (ctv=table(df_test[,8], pred.valid))
 head(df_test)
-
-getOption("repos")
